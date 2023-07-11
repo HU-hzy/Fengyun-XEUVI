@@ -31,7 +31,7 @@ def rm1(ims):
 
     im=IM.copy()
     
-    gain=0.97
+    gain=0.99
 
     T=0.05
 

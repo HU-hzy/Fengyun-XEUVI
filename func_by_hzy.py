@@ -109,5 +109,7 @@ def fy3_writefits(im,dir,name,**kw):
     
     hd['DATE-OBS'] = kw['obstime'].isot
     hd['DATOBSJD'] = kw['obstime'].jd
+    hd['RMGHOST'] = kw['rmghost']
+    hd['COE'] = kw['coe']#一致性亮度定标系数
     fname = 'fy3_l1_{}.fits'.format(kw['obstime'].strftime('%Y%m%d_%H%M%S'))
     fitswrite(dir+'/'+fname,im.astype('int16'),header=hd)
